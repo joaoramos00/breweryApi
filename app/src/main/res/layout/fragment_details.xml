@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Details">
-
+    <!-- Yellow background -->
     <ImageView
         android:id="@+id/arcShape"
         android:layout_width="match_parent"
@@ -13,7 +13,7 @@
         android:scaleType="center"
         android:src="@drawable/arc_shape"
         tools:ignore="ImageContrastCheck" />
-
+    <!-- Top toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
@@ -21,14 +21,127 @@
         android:background="@color/black"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
-
+    <!-- details background -->
     <ImageView
         android:id="@+id/detailsWindow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="20dp"
+        android:paddingBottom="50dp"
         android:scaleType="fitCenter"
-        android:elevation="20dp"
+        android:elevation="10dp"
         android:src="@drawable/details"
         />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:elevation="10dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="120dp"
+        android:text="@string/type"
+        android:textSize="22dp" />
+
+    />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="15dp"
+        android:layout_gravity="end"
+        android:scaleX="0.6"
+        android:scaleY="0.6"
+        android:elevation="10dp"/>
+
+    <!-- Type -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:layout_marginLeft="50dp"
+        android:elevation="10dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:text="@string/type_header" />
+
+    <!-- Show the type from DB -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="250dp"
+        android:elevation="10dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="50dp"
+        android:text="@string/type"
+        android:textSize="22dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:elevation="10dp"
+        android:layout_marginTop="300dp"/>
+
+
+    <!-- Web -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:layout_marginLeft="50dp"
+        android:elevation="10dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:text="@string/web_header" />
+
+    <!-- Show the web from DB -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="325dp"
+        android:elevation="10dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="50dp"
+        android:text="@string/web"
+        android:textSize="22dp" />
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider"
+        android:elevation="10dp"
+        android:layout_marginTop="375dp"/>
+
+
+    <!-- address -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="50dp"
+        android:elevation="10dp"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:text="@string/address_header" />
+
+    <!-- Show the address from DB -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:elevation="10dp"
+        android:layout_gravity="end"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="150dp"
+        android:text="@string/address"
+        android:textSize="22dp" />
+
+
 </FrameLayout>
