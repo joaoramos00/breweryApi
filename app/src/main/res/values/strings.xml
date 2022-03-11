@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Android</string>
+    <string name="kode">kode</string>
+    <string name="kategori">kategori</string>
+    <string name="isi">isi</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
