@@ -4,4 +4,18 @@
     <string name="kategori">kategori</string>
     <string name="isi">isi</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="name">name</string>
+    <string name="rate">X.X</string>
+    <string name="rateString">over 9000</string>
+    <string name="type_header">Tipo</string>
+    <string name="web_header">Site</string>
+    <string name="address_header">Endereço</string>
+    <string name="map_header">Ver no mapa</string>
+    <string name="type">type</string>
+    <string name="web">web</string>
+    <string name="address">R. Luis Dionisio de Souza, 375, Campinas, SP,Brasil</string>
+    <string name="yellowArc">Yellow Arc in details</string>
+    <string name="ratingStar">Number of stars rated</string>
+    <string name="detailsBackground">Details background</string>
 </resources>
