@@ -12,7 +12,8 @@
         android:layout_height="wrap_content"
         android:scaleType="center"
         android:src="@drawable/arc_shape"
-        tools:ignore="ImageContrastCheck" />
+        tools:ignore="ImageContrastCheck"
+        android:contentDescription="@string/yellowArc"/>
     <!-- Top toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
@@ -21,60 +22,87 @@
         android:background="@color/black"
         android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme" />
+
     <!-- details background -->
     <ImageView
         android:id="@+id/detailsWindow"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:elevation="10dp"
         android:padding="20dp"
         android:paddingBottom="50dp"
         android:scaleType="fitCenter"
-        android:elevation="10dp"
         android:src="@drawable/details"
+        android:contentDescription="@string/detailsBackground"
         />
+    <!-- Brewery Name -->
     <TextView
+        android:id="@+id/breweryName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:elevation="10dp"
         android:layout_gravity="end"
-        android:layout_marginRight="120dp"
-        android:text="@string/type"
-        android:textSize="22dp" />
+        android:layout_marginTop="110dp"
+        android:layout_marginEnd="120dp"
+        android:elevation="10dp"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
-    />
+    <!-- Raging Text -->
+    <TextView
+        android:id="@+id/rateNumber"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="175dp"
+        android:layout_marginTop="145dp"
+        android:elevation="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
     <RatingBar
         android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:layout_marginRight="15dp"
         android:layout_gravity="end"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="15dp"
+        android:contentDescription="@string/ratingStar"
+        android:elevation="10dp"
         android:scaleX="0.6"
-        android:scaleY="0.6"
-        android:elevation="10dp"/>
+        android:scaleY="0.6" />
+
+    <!-- Rating comment -->
+    <TextView
+        android:id="@+id/rateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="180dp"
+        android:elevation="10dp"
+        android:textSize="16sp" />
 
     <!-- Type -->
     <TextView
+        android:id="@+id/breweryTypeHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="250dp"
-        android:layout_marginLeft="50dp"
         android:elevation="10dp"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:text="@string/type_header" />
+        android:text="@string/type_header"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <!-- Show the type from DB -->
     <TextView
+        android:id="@+id/breweryType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"
-        android:elevation="10dp"
         android:layout_gravity="end"
-        android:layout_marginRight="50dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="10dp"
         android:text="@string/type"
-        android:textSize="22dp" />
+        android:textSize="22sp" />
 
     <View
         android:id="@+id/divider"
@@ -86,28 +114,29 @@
         android:elevation="10dp"
         android:layout_marginTop="300dp"/>
 
-
     <!-- Web -->
     <TextView
+        android:id="@+id/breweryWebHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="325dp"
-        android:layout_marginLeft="50dp"
         android:elevation="10dp"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:text="@string/web_header" />
+        android:text="@string/web_header"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <!-- Show the web from DB -->
     <TextView
+        android:id="@+id/breweryWeb"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="325dp"
-        android:elevation="10dp"
         android:layout_gravity="end"
-        android:layout_marginRight="50dp"
+        android:layout_marginTop="325dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="10dp"
         android:text="@string/web"
-        android:textSize="22dp" />
+        android:textSize="22sp" />
 
     <View
         android:id="@+id/divider2"
@@ -119,29 +148,28 @@
         android:elevation="10dp"
         android:layout_marginTop="375dp"/>
 
-
     <!-- address -->
     <TextView
+        android:id="@+id/breweryAddressHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
         android:layout_marginTop="400dp"
-        android:layout_marginLeft="50dp"
         android:elevation="10dp"
-        android:textSize="22dp"
-        android:textStyle="bold"
-        android:text="@string/address_header" />
+        android:text="@string/address_header"
+        android:textSize="22sp"
+        android:textStyle="bold" />
 
     <!-- Show the address from DB -->
     <TextView
+        android:id="@+id/breweryAddress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:elevation="10dp"
         android:layout_gravity="end"
-        android:layout_marginRight="50dp"
-        android:layout_marginLeft="150dp"
+        android:layout_marginStart="150dp"
+        android:layout_marginTop="400dp"
+        android:layout_marginEnd="50dp"
+        android:elevation="10dp"
         android:text="@string/address"
-        android:textSize="22dp" />
-
-
+        android:textSize="22sp" />
 </FrameLayout>
