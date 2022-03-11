@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Android</string>
-    
+
     <string name="name">name</string>
     <string name="rate">X.X</string>
     <string name="rateString">over 9000</string>

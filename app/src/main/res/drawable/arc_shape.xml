@@ -7,11 +7,11 @@
 
             <solid android:color="#FFD700" />
             <size
-                android:width="480dp"
-                android:height="300dp"/>
+                android:width="530dp"
+                android:height="260dp"/>
             <corners
-                android:bottomLeftRadius="300dp"
-                android:bottomRightRadius="300dp"/>
+                android:bottomLeftRadius="270dp"
+                android:bottomRightRadius="270dp"/>
 
         </shape>
     </item>

@@ -142,6 +142,4 @@
         android:layout_marginLeft="150dp"
         android:text="@string/address"
         android:textSize="22dp" />
-
-
 </FrameLayout>
