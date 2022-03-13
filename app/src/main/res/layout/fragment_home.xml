@@ -30,6 +30,8 @@
                 android:layout_marginTop="40dp"
                 android:textSize="22dp"
                 android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="Quicksand"
                 android:text="Bem vindo,\nEncontre as melhores cervejarias" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -44,20 +46,14 @@
                     android:hint="San Diego, CA" />
             </com.google.android.material.textfield.TextInputLayout>
 
-
-            <Button
-                android:id="@+id/btnDetails"
-                android:text="Detalhes"
-                android:backgroundTint="#079777"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="60dp"
                 android:textSize="22dp"
                 android:textStyle="bold"
+                android:textColor="#000000"
+                android:fontFamily="Quicksand"
                 android:text="Segundo a opinião dos usuários:" />
 
             <TextView
@@ -67,16 +63,16 @@
                 android:textSize="14dp"
                 android:text="Exibindo resultados." />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
+<!--            <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent">-->
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/recyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+                    android:layout_height="wrap_content"/>
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+<!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
 
 
         </LinearLayout>

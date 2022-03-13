@@ -5,8 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.findFragment
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -27,7 +27,7 @@ class Home : Fragment() {
     override fun onViewCreated(itemView: View, savedInstanceState: Bundle?) {
         super.onViewCreated(itemView, savedInstanceState)
         val recyclerView = itemView.findViewById<RecyclerView>(R.id.recyclerView)
-        val btnDetails = itemView.findViewById<Button>(R.id.btnDetails)
+//        val btnDetails = itemView.findViewById<Button>(R.id.btnDetails)
 
         recyclerView.apply {
             // set a LinearLayoutManager to handle Android
@@ -37,9 +37,13 @@ class Home : Fragment() {
             adapter = RecyclerAdapter()
         }
 
-        btnDetails.setOnClickListener {
-            Navigation.findNavController(itemView).navigate(R.id.details)
-        }
+//        btnDetails.setOnClickListener {
+//            Navigation.findNavController(itemView).navigate(R.id.details)
+//        }
 
+    }
+
+    fun onEvent(data: Int) {
+        Toast.makeText(context, "Teste" , Toast.LENGTH_LONG).show()
     }
 }

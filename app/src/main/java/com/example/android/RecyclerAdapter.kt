@@ -5,12 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
-    private val kode = arrayOf("d116df5",
-        "36ffc75", "f5cfe78", "5b87628",
+    private val kode = arrayOf("Cervejaria A",
+        "Cervejaria B", "Cerbejaria C", "5b87628",
         "db8d14e", "9913dc4", "e120f96",
         "466251b")
 
@@ -19,33 +21,39 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
         "Keluarga", "Hutang",
         "Teknologi", "Pidana")
 
-    private val isi = arrayOf("pertanyaan 9",
-        "pertanyaan 11", "pertanyaan 17", "test forum",
+    private val isi = arrayOf("3,6",
+        "3,9", "5,0", "4,9",
         "pertanyaan 12", "pertanyaan 18", "pertanyaan 20",
         "pertanyaan 21")
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var itemKode: TextView
-        var itemKategori: TextView
-        var itemIsi: TextView
+        var itemKode: TextView = itemView.findViewById(R.id.breweryName)
+//        var itemKategori: TextView = itemView.findViewById(R.id.ratingText)
+        var itemIsi: TextView = itemView.findViewById(R.id.breweryType)
+        var card: CardView = itemView.findViewById(R.id.card_item)
+
+
 
         init {
-            itemKode = itemView.findViewById(R.id.kodePertanyaan)
-            itemKategori = itemView.findViewById(R.id.kategori)
-            itemIsi = itemView.findViewById(R.id.isiPertanyaan)
 
-            itemView.setOnClickListener {
-                var position: Int = getAdapterPosition()
-                val context = itemView.context
-                val intent = Intent(context, Home::class.java).apply {
-                    putExtra("NUMBER", position)
-                    putExtra("CODE", itemKode.text)
-                    putExtra("CATEGORY", itemKategori.text)
-                    putExtra("CONTENT", itemIsi.text)
-                }
-                context.startActivity(intent)
+            card.setOnClickListener {
+                Navigation.findNavController(itemView).navigate(R.id.details)
             }
+
+//            itemView.setOnClickListener {
+//
+////                val position: Int = absoluteAdapterPosition
+//                val context = itemView.context
+//
+////                val intent = Intent(context, Details::class.java).apply {
+//////                    putExtra("NUMBER", position)
+//////                    putExtra("CODE", itemKode.text)
+//////                    putExtra("CATEGORY", itemKategori.text)
+//////                    putExtra("CONTENT", itemIsi.text)
+////                }
+////                context.startActivity(intent)
+//            }
         }
     }
 
@@ -57,7 +65,7 @@ class RecyclerAdapter : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         viewHolder.itemKode.text = kode[i]
-        viewHolder.itemKategori.text = kategori[i]
+//        viewHolder.itemKategori.text = kategori[i]
         viewHolder.itemIsi.text = isi[i]
 
     }

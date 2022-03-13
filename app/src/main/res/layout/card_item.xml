@@ -16,45 +16,113 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgItem"
+            android:layout_width="46dp"
+            android:layout_height="46dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginStart="10dp"
+            card_view:cardBackgroundColor="#FFC366"
+            card_view:cardCornerRadius="23dp">
+
+            <TextView
+                android:id="@+id/letter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="#8A7251"
+                android:textStyle="bold"
+                android:textSize="20dp" />
+        </androidx.cardview.widget.CardView>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toEndOf="@+id/imgItem">
 
             <TextView
-                android:id="@+id/kodePertanyaan"
+                android:id="@+id/breweryName"
                 android:layout_width="181dp"
-                android:layout_height="20dp"
+                android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="10dp"
                 android:layout_marginEnd="68dp"
-                android:text="@string/kode" />
-
-            <TextView
-                android:id="@+id/kategori"
-                android:layout_width="match_parent"
-                android:layout_height="20dp"
-                android:layout_marginTop="16dp"
-                android:layout_marginEnd="16dp"
-                android:text="@string/kategori"
-                android:gravity="end|center_vertical"/>
+                android:textSize="22dp"
+                android:textColor="#000000"
+                android:text="@string/name_beer" />
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_toEndOf="@+id/imgItem">
 
             <TextView
-                android:id="@+id/isiPertanyaan"
-                android:layout_width="match_parent"
+                android:id="@+id/breweryType2"
+                android:layout_width="70dp"
                 android:layout_height="36dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="44dp"
                 android:layout_marginEnd="16dp"
                 android:layout_marginBottom="16dp"
+                android:textSize="18dp"
                 android:gravity="top"
-                android:text="@string/isi" />
+                android:textColor="#000000"
+                android:text="Tipo" />
+
+            <TextView
+                android:id="@+id/breweryType"
+                android:layout_width="55dp"
+                android:layout_height="36dp"
+                android:textAlignment="textEnd"
+                android:layout_marginEnd="5dp"
+                android:layout_marginTop="44dp"
+                android:layout_marginBottom="16dp"
+                android:textSize="16dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:text="3,6" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_marginTop="44dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_marginTop="44dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_marginTop="44dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_marginTop="44dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/star"/>
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_marginTop="44dp"
+                android:layout_height="25dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/star"/>
 
         </LinearLayout>
 
