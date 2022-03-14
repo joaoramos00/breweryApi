@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
-import android.widget.ImageView
 import androidx.fragment.app.Fragment
 
 
@@ -29,10 +28,10 @@ class Details : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val btnShowMap = view.findViewById<ImageButton>(R.id.btnShowMap)
         btnShowMap.setOnClickListener(View.OnClickListener { view ->
-        val functions: Functions = Functions()
+        val maps: Maps = Maps()
         val context: Context? = getContext()
             if (context != null) {
-                functions.openMap(2.7F,2.7F, context)
+                maps.openMap(2.7F,2.7F, context)
             }
         })
     }

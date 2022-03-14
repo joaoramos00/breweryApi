@@ -9,16 +9,14 @@ import androidx.core.content.ContextCompat.startActivity
 import java.util.*
 
 
-class Functions {
+class Maps {
 
 
     fun openMap(longitude: Float, latitude: Float, context: Context) {
-        val longitude = 10.306283180899
-        val latitude = 37.7834497667258
+        val longitude = 22.9099
+        val latitude = 47.0626
 
         val uri: String = String.format(Locale.ENGLISH, "geo:%f,%f", latitude, longitude)
-
-
 
         val intent = Intent(Intent.ACTION_VIEW, Uri.parse(uri.toString()))
         intent.setPackage("com.google.android.apps.maps")
@@ -29,7 +27,8 @@ class Functions {
                 val unrestrictedIntent = Intent(Intent.ACTION_VIEW, Uri.parse(uri.toString()))
                 startActivity(context, unrestrictedIntent, null)
             } catch (innerEx: ActivityNotFoundException) {
-                Toast.makeText(context, "Please install a maps application", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, "Please install a maps application", Toast.LENGTH_LONG)
+                    .show()
             }
         }
     }

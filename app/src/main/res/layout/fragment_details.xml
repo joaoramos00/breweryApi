@@ -4,31 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
     tools:context=".Details">
     <!-- Yellow background -->
     <ImageView
         android:id="@+id/arcShape"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:contentDescription="@string/yellowArc"
         android:scaleType="center"
         android:src="@drawable/arc_shape"
-        tools:ignore="ImageContrastCheck"
-        android:contentDescription="@string/yellowArc"/>
+        tools:ignore="ImageContrastCheck" />
     <!-- Top toolbar -->
 
     <!-- details background -->
     <ImageView
         android:id="@+id/detailsWindow"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:elevation="10dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:paddingBottom="60dp"
-        android:scaleType="fitCenter"
-        android:src="@drawable/details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/details"
         android:contentDescription="@string/detailsBackground"
-        />
+        android:elevation="10dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/details" />
     <!-- Brewery Name -->
     <TextView
         android:id="@+id/breweryName"
@@ -38,9 +37,9 @@
         android:layout_marginTop="110dp"
         android:layout_marginEnd="120dp"
         android:elevation="10dp"
+        android:text="aaaaa"
         android:textSize="22sp"
-        android:textStyle="bold"
-        android:text="aaaaa"/>
+        android:textStyle="bold" />
 
     <!-- Raging Text -->
     <TextView
@@ -73,8 +72,8 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="180dp"
         android:elevation="10dp"
-        android:textSize="16sp"
-        android:text="@string/rateString"/>
+        android:text="@string/rateString"
+        android:textSize="16sp" />
 
     <!-- Type -->
     <TextView
@@ -103,12 +102,12 @@
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginRight="50dp"
         android:background="?android:attr/listDivider"
-        android:elevation="10dp"
-        android:layout_marginTop="300dp"/>
+        android:elevation="10dp" />
 
     <!-- Web -->
     <TextView
@@ -137,12 +136,12 @@
     <View
         android:id="@+id/divider2"
         android:layout_width="match_parent"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
         android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="375dp"
+        android:layout_marginRight="50dp"
         android:background="?android:attr/listDivider"
-        android:elevation="10dp"
-        android:layout_marginTop="375dp"/>
+        android:elevation="10dp" />
 
     <!-- address -->
     <TextView
@@ -171,13 +170,38 @@
 
     <ImageButton
         android:id="@+id/btnShowMap"
-        android:layout_width="287dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="50dp"
         android:layout_marginTop="475dp"
+        android:layout_marginEnd="50dp"
+        android:adjustViewBounds="false"
         android:backgroundTint="@color/white"
         android:elevation="10dp"
+        android:paddingRight="170dp"
         android:src="@android:drawable/ic_dialog_map"
         app:tint="@color/gold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="110dp"
+        android:layout_marginTop="485dp"
+        android:elevation="10dp"
+        android:text="@string/map_header"
+        android:textSize="22dp"
+
+        />
+
+    <View
+        android:id="@+id/divider3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="550dp"
+        android:layout_marginRight="50dp"
+        android:background="?android:attr/listDivider"
+        android:elevation="10dp" />
+
 
 </FrameLayout>
