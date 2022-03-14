@@ -15,13 +15,6 @@
         tools:ignore="ImageContrastCheck"
         android:contentDescription="@string/yellowArc"/>
     <!-- Top toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/black"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="?attr/actionBarTheme" />
 
     <!-- details background -->
     <ImageView
@@ -29,8 +22,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:elevation="10dp"
-        android:padding="20dp"
-        android:paddingBottom="50dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="60dp"
         android:scaleType="fitCenter"
         android:src="@drawable/details"
         android:contentDescription="@string/detailsBackground"
@@ -45,7 +39,8 @@
         android:layout_marginEnd="120dp"
         android:elevation="10dp"
         android:textSize="22sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:text="aaaaa"/>
 
     <!-- Raging Text -->
     <TextView
@@ -78,7 +73,8 @@
         android:layout_marginStart="220dp"
         android:layout_marginTop="180dp"
         android:elevation="10dp"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:text="@string/rateString"/>
 
     <!-- Type -->
     <TextView
@@ -171,5 +167,17 @@
         android:layout_marginEnd="50dp"
         android:elevation="10dp"
         android:text="@string/address"
-        android:textSize="22sp" />
+        android:textSize="18sp" />
+
+    <ImageButton
+        android:id="@+id/btnShowMap"
+        android:layout_width="287dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="475dp"
+        android:backgroundTint="@color/white"
+        android:elevation="10dp"
+        android:src="@android:drawable/ic_dialog_map"
+        app:tint="@color/gold" />
+
 </FrameLayout>
