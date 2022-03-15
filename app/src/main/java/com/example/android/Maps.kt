@@ -11,10 +11,7 @@ import java.util.*
 
 class Maps {
 
-
     fun openMap(longitude: Float, latitude: Float, context: Context) {
-        val longitude = 22.9099
-        val latitude = 47.0626
 
         val uri: String = String.format(Locale.ENGLISH, "geo:%f,%f", latitude, longitude)
 

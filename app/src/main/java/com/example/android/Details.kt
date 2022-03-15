@@ -6,6 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
+import android.widget.RatingBar
+import android.widget.TextView
 import androidx.fragment.app.Fragment
 
 
@@ -28,11 +30,21 @@ class Details : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         val btnShowMap = view.findViewById<ImageButton>(R.id.btnShowMap)
         btnShowMap.setOnClickListener(View.OnClickListener { view ->
-        val maps: Maps = Maps()
         val context: Context? = getContext()
             if (context != null) {
-                maps.openMap(2.7F,2.7F, context)
+                Maps().openMap(2.7F,2.7F, context)
             }
         })
+        view.findViewById<TextView>(R.id.breweryName).setText(Data().breweryName)
+        view.findViewById<TextView>(R.id.rateNumber).setText(Data().breweryRate)
+        view.findViewById<TextView>(R.id.rateText).setText(Data().breweryRateString)
+        view.findViewById<TextView>(R.id.breweryType).setText(Data().breweryType)
+        view.findViewById<TextView>(R.id.breweryWeb).setText(Data().breweryWeb)
+        view.findViewById<TextView>(R.id.breweryAddress).setText(Data().breweryAddress)
+        val ratingBar: RatingBar = view.findViewById<RatingBar>(R.id.ratingBar)
+        ratingBar.setOnTouchListener { view, event -> true }
+        ratingBar.rating = 3F
+
+
     }
 }
