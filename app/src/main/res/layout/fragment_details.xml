@@ -51,19 +51,19 @@
 
         <!-- Rating comment -->
 
-        <me.zhanghai.android.materialratingbar.MaterialRatingBar
-            android:id="@+id/ratingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="130dp"
-            android:layout_marginTop="40dp"
-            android:contentDescription="@string/ratingStar"
-            android:focusable="false"
-            android:scaleX="0.6"
-            android:scaleY="0.6"
-            android:stepSize="1"
-            android:theme="@style/RatingBar"
-            />
+<!--        <me.zhanghai.android.materialratingbar.MaterialRatingBar-->
+<!--            android:id="@+id/ratingBar"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="130dp"-->
+<!--            android:layout_marginTop="40dp"-->
+<!--            android:contentDescription="@string/ratingStar"-->
+<!--            android:focusable="false"-->
+<!--            android:scaleX="0.6"-->
+<!--            android:scaleY="0.6"-->
+<!--            android:stepSize="1"-->
+<!--            android:theme="@style/RatingBar"-->
+<!--            />-->
 
         <TextView
             android:id="@+id/rateText"
@@ -154,16 +154,16 @@
             android:textSize="18sp"
             />
 
-        <ImageButton
-            android:id="@+id/btnShowMap"
-            android:layout_width="206dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="350dp"
-            android:backgroundTint="@color/white"
-            android:src="@drawable/maps"
-            android:scaleType="fitCenter"
-            android:paddingRight="150dp"/>
+<!--        <ImageButton-->
+<!--            android:id="@+id/btnShowMap"-->
+<!--            android:layout_width="206dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="350dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:src="@drawable/maps"-->
+<!--            android:scaleType="fitCenter"-->
+<!--            android:paddingRight="150dp"/>-->
 
         <TextView
             android:layout_width="wrap_content"
