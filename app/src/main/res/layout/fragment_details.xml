@@ -192,7 +192,8 @@
             android:textColor="@color/black"
             android:textStyle="bold"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="20dp"/>
+            android:layout_marginBottom="20dp"
+            />
 
     </androidx.cardview.widget.CardView>
 </FrameLayout>

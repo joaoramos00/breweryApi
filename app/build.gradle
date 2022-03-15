@@ -71,6 +71,9 @@ dependencies {
     // Rating Bar
     implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
 
+    //Bottom Shett
+    implementation 'com.google.android.material:material:1.2.0-alpha02'
+
     // End JoaoRamos
 
 //    // Koin for Kotlin Multiplatform
