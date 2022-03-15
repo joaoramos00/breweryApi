@@ -1,17 +1,16 @@
-package com.example.android
+package com.example.android.view
 
 import android.annotation.SuppressLint
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.RatingBar
 import android.widget.TextView
-import java.security.AccessControlContext
-import java.security.AccessController.getContext
+import com.example.android.Data
+import com.example.android.Maps
+import com.example.android.R
+import com.google.android.material.bottomsheet.BottomSheetDialog
 
 class DetailsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,14 +34,13 @@ class DetailsActivity : AppCompatActivity() {
         val ratingBar: RatingBar = findViewById(R.id.ratingBar)
         ratingBar.setOnTouchListener { view, event -> true }
         ratingBar.rating = 3F
-    }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return super.onOptionsItemSelected(item)
-    }
+        val btnRateBrewery = findViewById<Button>(R.id.rateBrewery)
+        btnRateBrewery.setOnClickListener {
+            BottomSheetDialog(this@DetailsActivity)
+            val view = layoutInflater.inflate(R.layout.rate_brewery_layout, null)
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        return super.onCreateOptionsMenu(menu)
+        }
     }
 
 }

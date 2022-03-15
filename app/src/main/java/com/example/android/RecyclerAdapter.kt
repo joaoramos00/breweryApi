@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.cardview.widget.CardView
-import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.android.model.Breweries
+import com.example.android.view.DetailsActivity
 
 class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter<RecyclerAdapter.ViewHolder>() {
 

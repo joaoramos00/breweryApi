@@ -1,14 +1,14 @@
-package com.example.android
+package com.example.android.view
 
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.AttributeSet
-import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.android.NetworkUtils
+import com.example.android.R
+import com.example.android.RecyclerAdapter
 import com.example.android.model.Breweries
 import com.example.android.service.BreweryAPIService
 import retrofit2.Call
@@ -36,8 +36,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun getData() {
-        val retrofitClient = NetworkUtils
-            .getRetrofitInstance("https://api.openbrewerydb.org/")
+        val retrofitClient = NetworkUtils.getRetrofitInstance("https://api.openbrewerydb.org/")
 
         val endpoint = retrofitClient.create(BreweryAPIService::class.java)
         val callback = endpoint.getBreweries()
