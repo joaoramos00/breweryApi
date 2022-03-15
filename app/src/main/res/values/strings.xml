@@ -14,4 +14,6 @@
     <string name="detailsBackground">Details background</string>
     <string name="rateBrewery">AVALIAR CERVEJARIA</string>
     <string name="rateBreweryHeader">"Avalie a "</string>
+    <string name="image_background">Image background</string>
+    <string name="san_diego">Buscar local</string>
 </resources>

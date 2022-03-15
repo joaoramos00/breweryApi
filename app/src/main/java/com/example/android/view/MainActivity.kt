@@ -27,12 +27,10 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.setLogo(R.drawable.ic_beer)
         supportActionBar?.setDisplayShowHomeEnabled(true)
         supportActionBar?.setDisplayUseLogoEnabled(true)
-//        supportActionBar?.setDisplayHomeAsUpEnabled(true);
-//        supportActionBar?.setHomeButtonEnabled(true);
 
         recyclerView = findViewById(R.id.mainRecyclerView)
         results = findViewById(R.id.results)
-        getData()
+
     }
 
     private fun getData() {
