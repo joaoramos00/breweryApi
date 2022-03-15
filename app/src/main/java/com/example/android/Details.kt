@@ -5,10 +5,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.ImageButton
 import android.widget.RatingBar
 import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
 
 
 /**
@@ -28,9 +32,9 @@ class Details : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val context: Context? = getContext()
         val btnShowMap = view.findViewById<ImageButton>(R.id.btnShowMap)
         btnShowMap.setOnClickListener(View.OnClickListener { view ->
-        val context: Context? = getContext()
             if (context != null) {
                 Maps().openMap(2.7F,2.7F, context)
             }
@@ -45,6 +49,10 @@ class Details : Fragment() {
         ratingBar.setOnTouchListener { view, event -> true }
         ratingBar.rating = 3F
 
+        val btnRateBrewery = view.findViewById<Button>(R.id.rateBrewery)
+        btnRateBrewery.setOnClickListener(View.OnClickListener { view ->
+            view.findNavController().navigate(R.id.action_details_to_rateWindow)
+        })
 
     }
 }
