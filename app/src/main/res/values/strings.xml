@@ -13,4 +13,5 @@
     <string name="ratingStar">Number of stars rated</string>
     <string name="detailsBackground">Details background</string>
     <string name="rateBrewery">AVALIAR CERVEJARIA</string>
+    <string name="rateBreweryHeader">"Avalie a "</string>
 </resources>

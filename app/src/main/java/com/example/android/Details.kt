@@ -13,6 +13,8 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment.Companion.findNavController
+import com.google.android.material.bottomsheet.BottomSheetDialog
+import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 
 
 /**
@@ -48,11 +50,13 @@ class Details : Fragment() {
         val ratingBar: RatingBar = view.findViewById<RatingBar>(R.id.ratingBar)
         ratingBar.setOnTouchListener { view, event -> true }
         ratingBar.rating = 3F
-/*
+
         val btnRateBrewery = view.findViewById<Button>(R.id.rateBrewery)
-        btnRateBrewery.setOnClickListener(View.OnClickListener { view ->
-            view.findNavController().navigate(R.id.action_details_to_rateWindow)
-        })*/
+        btnRateBrewery.setOnClickListener {
+            val dialog = context?.let { it -> BottomSheetDialog(it) }
+            val view = layoutInflater.inflate(R.layout.rate_brewery_layout, null)
+
+        }
 
     }
 }
