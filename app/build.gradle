@@ -68,6 +68,9 @@ dependencies {
     // Jetpack Compose Integration
     implementation "androidx.navigation:navigation-compose:$nav_version"
 
+    // Rating Bar
+    implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
+
     // End JoaoRamos
 
 //    // Koin for Kotlin Multiplatform
