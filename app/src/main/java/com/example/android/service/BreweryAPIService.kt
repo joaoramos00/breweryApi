@@ -4,10 +4,12 @@ import com.example.android.model.Breweries
 import retrofit2.Call
 //import retrofit2.Call
 import retrofit2.http.GET
+import retrofit2.http.Path
+import retrofit2.http.Query
 
 interface BreweryAPIService {
 
-    @GET("breweries?by_city=san_diego")
+    @GET("breweries")
 //    fun getBreweries(): List<Breweries>
-    fun getBreweries(): Call<List<Breweries>>
+    fun getBreweries(@Query("by_city") city: String): Call<List<Breweries>>
 }

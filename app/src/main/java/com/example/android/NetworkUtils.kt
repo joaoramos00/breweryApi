@@ -10,9 +10,9 @@ class NetworkUtils {
         /** Retorna uma Instância do Client Retrofit para Requisições
          * @param path Caminho Principal da API
          */
-        fun getRetrofitInstance(path : String) : Retrofit {
+        fun getRetrofitInstance() : Retrofit {
             return Retrofit.Builder()
-                .baseUrl(path)
+                .baseUrl("https://api.openbrewerydb.org/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
         }
