@@ -13,7 +13,9 @@
         android:theme="@style/Theme.Android">
         <activity
             android:name=".DetailsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:label="Detalhes da cervejaria"
+            android:parentActivityName=".MainActivity"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
