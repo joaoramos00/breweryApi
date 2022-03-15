@@ -41,6 +41,8 @@
                 android:layout_marginTop="20dp">
 
                 <com.google.android.material.textfield.TextInputEditText
+                    android:drawableStart="@android:drawable/ic_menu_search"
+                    android:drawableEnd="@android:drawable/ic_menu_revert"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="San Diego, CA" />
@@ -57,6 +59,7 @@
                 android:text="Segundo a opinião dos usuários:" />
 
             <TextView
+                android:id="@+id/results"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
@@ -67,10 +70,10 @@
 <!--                android:layout_width="match_parent"-->
 <!--                android:layout_height="match_parent">-->
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/recyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"/>
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/recyclerView"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"/>-->
 
 <!--            </androidx.constraintlayout.widget.ConstraintLayout>-->
 

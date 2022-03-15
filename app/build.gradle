@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -28,6 +29,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    dataBinding {
+        enabled = true
     }
 }
 
@@ -65,4 +69,9 @@ dependencies {
     implementation "androidx.navigation:navigation-compose:$nav_version"
 
     // End JoaoRamos
+
+//    // Koin for Kotlin Multiplatform
+//    implementation "io.insert-koin:koin-core:$koin_version"
+//    // Koin Test for Kotlin Multiplatform
+//    testImplementation "io.insert-koin:koin-test:$koin_version"
 }
