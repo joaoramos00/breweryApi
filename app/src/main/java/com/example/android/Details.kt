@@ -48,11 +48,11 @@ class Details : Fragment() {
         val ratingBar: RatingBar = view.findViewById<RatingBar>(R.id.ratingBar)
         ratingBar.setOnTouchListener { view, event -> true }
         ratingBar.rating = 3F
-
+/*
         val btnRateBrewery = view.findViewById<Button>(R.id.rateBrewery)
         btnRateBrewery.setOnClickListener(View.OnClickListener { view ->
             view.findNavController().navigate(R.id.action_details_to_rateWindow)
-        })
+        })*/
 
     }
 }
