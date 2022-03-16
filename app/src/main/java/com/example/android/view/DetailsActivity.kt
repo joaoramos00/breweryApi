@@ -8,7 +8,7 @@ import android.widget.ImageButton
 import android.widget.RatingBar
 import android.widget.TextView
 import com.example.android.Data
-import com.example.android.Maps
+import com.example.android.service.MapsService
 import com.example.android.R
 import com.google.android.material.bottomsheet.BottomSheetDialog
 
@@ -19,11 +19,10 @@ class DetailsActivity : AppCompatActivity() {
         onLoad()
     }
 
-    @SuppressLint("ClickableViewAccessibility")
     fun onLoad() {
         val btnShowMap = findViewById<ImageButton>(R.id.btnShowMap)
         btnShowMap.setOnClickListener {
-            Maps().openMap(2.7F,2.7F, this@DetailsActivity)
+            MapsService().openMap(2.7F,2.7F, this)
         }
         findViewById<TextView>(R.id.breweryName).text = Data().breweryName
         findViewById<TextView>(R.id.rateNumber).text = Data().breweryRate
@@ -35,12 +34,11 @@ class DetailsActivity : AppCompatActivity() {
         ratingBar.setOnTouchListener { view, event -> true }
         ratingBar.rating = 3F
 
-        val btnRateBrewery = findViewById<Button>(R.id.rateBrewery)
+        val btnRateBrewery = findViewById<Button>(R.id.rateBreweryModal)
         btnRateBrewery.setOnClickListener {
-            BottomSheetDialog(this@DetailsActivity)
+            val dialog = BottomSheetDialog(this)
             val view = layoutInflater.inflate(R.layout.rate_brewery_layout, null)
-
+            dialog.show()
         }
     }
-
 }

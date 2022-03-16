@@ -160,9 +160,10 @@
             android:layout_marginStart="20dp"
             android:layout_marginTop="350dp"
             android:backgroundTint="@color/white"
-            android:src="@drawable/maps"
+            android:contentDescription="@string/open_map"
+            android:paddingRight="150dp"
             android:scaleType="fitCenter"
-            android:paddingRight="150dp"/>
+            android:src="@drawable/maps" />
 
         <TextView
             android:layout_width="wrap_content"
@@ -182,7 +183,7 @@
             android:elevation="10dp" />
 
         <Button
-            android:id="@+id/rateBrewery"
+            android:id="@+id/rateBreweryModal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="430dp"
