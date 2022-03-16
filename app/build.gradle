@@ -72,7 +72,7 @@ dependencies {
     implementation 'me.zhanghai.android.materialratingbar:library:1.4.0'
 
     //Bottom Shett
-    implementation 'com.google.android.material:material:1.2.0-alpha02'
+    implementation 'com.google.android.material:material:1.6.0-alpha03'
 
     // End JoaoRamos
 

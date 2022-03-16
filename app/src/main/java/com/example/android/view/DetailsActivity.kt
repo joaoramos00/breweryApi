@@ -38,6 +38,7 @@ class DetailsActivity : AppCompatActivity() {
         btnRateBrewery.setOnClickListener {
             val dialog = BottomSheetDialog(this)
             val view = layoutInflater.inflate(R.layout.rate_brewery_layout, null)
+            dialog.setContentView(view)
             dialog.show()
         }
     }
