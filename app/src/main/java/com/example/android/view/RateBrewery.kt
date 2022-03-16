@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.TextView
 import com.example.android.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
@@ -21,8 +22,12 @@ class RateBrewery : BottomSheetDialogFragment() {
         val view: View = inflater.inflate(R.layout.rate_brewery_layout, container, false)
         view?.findViewById<TextView>(R.id.rateBreweryModal)?.text = "Avaliar a Cervejaria"
         val email: String = view.findViewById<TextView>(R.id.emailRate).toString()
-        if(isValidEmail(email)) {
+        if (isValidEmail(email)) {
             saveRate(email)
+        }
+        val btnCancel = view.findViewById<ImageButton>(R.id.btnCancel)
+        btnCancel.setOnClickListener {
+            getActivity()?.getFragmentManager()?.popBackStack();
         }
         return super.onCreateView(inflater, container, savedInstanceState)
     }
@@ -35,9 +40,10 @@ class RateBrewery : BottomSheetDialogFragment() {
         return if (email == null || email.isEmpty() || email.endsWith(".")) {
             false
         } else {
-            val emailMatcher:Matcher = EMAIL_PATTERN.matcher(email)
+            val emailMatcher: Matcher = EMAIL_PATTERN.matcher(email)
             emailMatcher.matches()
         }
     }
+
 
 }

@@ -26,6 +26,25 @@
         android:contentDescription="@string/detailsBackground"
         android:elevation="10dp"
         app:cardCornerRadius="10dp">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/imgItem"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginStart="40dp"
+            app:cardCornerRadius="90dp"
+            android:backgroundTint="#FFC366">
+
+            <TextView
+                android:id="@+id/letter"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textColor="#8A7251"
+                android:textStyle="bold"
+                android:textSize="30sp" />
+        </androidx.cardview.widget.CardView>
         <!-- Brewery Name -->
 
         <!-- Raging Text -->
@@ -35,7 +54,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:layout_marginTop="10dp"
-            android:layout_marginEnd="100dp"
+            android:layout_marginEnd="20dp"
             android:textSize="22sp"
             android:textStyle="bold" />
 
