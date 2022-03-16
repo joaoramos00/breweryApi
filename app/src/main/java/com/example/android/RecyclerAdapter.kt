@@ -32,7 +32,7 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
         private val breweryRating: TextView = itemView.findViewById(R.id.breweryRating)
         private val breweryType: TextView = itemView.findViewById(R.id.breweryType)
         private val starOne: ImageView = itemView.findViewById(R.id.star_one)
-        private var starTwo: ImageView = itemView.findViewById(R.id.star_two)
+        private val starTwo: ImageView = itemView.findViewById(R.id.star_two)
         private val starThree: ImageView = itemView.findViewById(R.id.star_three)
         private val starFour: ImageView = itemView.findViewById(R.id.star_four)
         private val starFive: ImageView = itemView.findViewById(R.id.star_five)
