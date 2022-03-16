@@ -42,7 +42,7 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
 
         fun bindData(breweries: Breweries) {
 
-            var rating: Double? = 4.3
+            var rating: Double? = 1.8
             if (rating === null) rating = 0.0
             breweryName.text = breweries.name
             breweryType.text = breweries.brewery_type
@@ -50,10 +50,9 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
             breweryRating.text = rating.toString()
             brewery = breweries
             mountStart(rating.toInt())
-
         }
 
-        fun mountStart(rating: Int) {
+        private fun mountStart(rating: Int) {
             if (rating > 0) starOne.setBackgroundResource(R.drawable.star)
             if (rating >= 2) starTwo.setBackgroundResource(R.drawable.star)
             if (rating >= 3) starThree.setBackgroundResource(R.drawable.star)
@@ -62,7 +61,6 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
         }
 
         init {
-
             card.setOnClickListener {
                 val context = itemView.context
                 val intent = Intent(context, DetailsActivity::class.java).apply {
@@ -70,7 +68,6 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
                 }
                 context.startActivity(intent)
             }
-
         }
     }
 }
