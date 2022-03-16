@@ -1,29 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rateBrewer"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:padding="16dp">
 
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:backgroundTint="@color/white"
+        android:tint="#000000"
+        app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+        tools:ignore="UseAppTint" />
+
     <TextView
+        android:id="@+id/rateBreweryModal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="25sp" />
 
-    <Button
-        android:layout_margin="10dp"
-        android:id="@+id/algo_button"
+    <me.zhanghai.android.materialratingbar.MaterialRatingBar
+        android:id="@+id/ratingBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Share this Algorithm" />
+        android:contentDescription="@string/ratingStar"
+        android:stepSize="1"
+        android:theme="@style/RatingBar" />
+
+    <EditText
+        android:id="@+id/emailRate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:text="@string/putEmail"/>
 
     <Button
-        android:layout_margin="10dp"
         android:id="@+id/course_button"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Share this Course" />
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/gold"
+        android:text="@string/save"
+        android:textColor="@color/black"
+        android:textStyle="bold" />
+
 
 </LinearLayout>

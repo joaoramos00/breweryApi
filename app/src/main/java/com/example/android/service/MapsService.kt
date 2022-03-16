@@ -1,4 +1,4 @@
-package com.example.android
+package com.example.android.service
 
 import android.content.ActivityNotFoundException
 import android.content.Context
@@ -9,7 +9,7 @@ import androidx.core.content.ContextCompat.startActivity
 import java.util.*
 
 
-class Maps {
+class MapsService {
 
     fun openMap(longitude: Float, latitude: Float, context: Context) {
 
