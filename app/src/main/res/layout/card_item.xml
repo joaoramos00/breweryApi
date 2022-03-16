@@ -93,26 +93,31 @@
                 android:text="0.0" />
 
             <ImageView
+                android:id="@+id/star_one"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/star_outline"/>
             <ImageView
+                android:id="@+id/star_two"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/star_outline"/>
             <ImageView
+                android:id="@+id/star_three"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/star_outline"/>
             <ImageView
+                android:id="@+id/star_four"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginBottom="16dp"
                 android:src="@drawable/star_outline"/>
             <ImageView
+                android:id="@+id/star_five"
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_marginBottom="16dp"

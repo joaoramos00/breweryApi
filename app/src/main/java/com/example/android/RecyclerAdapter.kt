@@ -4,6 +4,7 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
@@ -26,20 +27,38 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-        var brewery: Breweries? = null
-        var breweryName: TextView = itemView.findViewById(R.id.breweryName)
-        var breweryRating: TextView = itemView.findViewById(R.id.breweryRating)
-        var breweryType: TextView = itemView.findViewById(R.id.breweryType)
+        private var brewery: Breweries? = null
+        private val breweryName: TextView = itemView.findViewById(R.id.breweryName)
+        private val breweryRating: TextView = itemView.findViewById(R.id.breweryRating)
+        private val breweryType: TextView = itemView.findViewById(R.id.breweryType)
+        private val starOne: ImageView = itemView.findViewById(R.id.star_one)
+        private var starTwo: ImageView = itemView.findViewById(R.id.star_two)
+        private val starThree: ImageView = itemView.findViewById(R.id.star_three)
+        private val starFour: ImageView = itemView.findViewById(R.id.star_four)
+        private val starFive: ImageView = itemView.findViewById(R.id.star_five)
 
         var letter: TextView = itemView.findViewById(R.id.letter)
         var card: CardView = itemView.findViewById(R.id.card_item)
 
         fun bindData(breweries: Breweries) {
+
+            var rating: Double? = 4.3
+            if (rating === null) rating = 0.0
             breweryName.text = breweries.name
             breweryType.text = breweries.brewery_type
             letter.text = breweries.name?.first().toString()
-            breweryRating.text = "0.0"
+            breweryRating.text = rating.toString()
             brewery = breweries
+            mountStart(rating.toInt())
+
+        }
+
+        fun mountStart(rating: Int) {
+            if (rating > 0) starOne.setBackgroundResource(R.drawable.star)
+            if (rating >= 2) starTwo.setBackgroundResource(R.drawable.star)
+            if (rating >= 3) starThree.setBackgroundResource(R.drawable.star)
+            if (rating >= 4) starFour.setBackgroundResource(R.drawable.star)
+            if (rating == 5) starFive.setBackgroundResource(R.drawable.star)
         }
 
         init {
@@ -52,13 +71,6 @@ class RecyclerAdapter(var listBreweries: List<Breweries>) : RecyclerView.Adapter
                 context.startActivity(intent)
             }
 
-//            itemView.setOnClickListener {
-//
-////                val position: Int = absoluteAdapterPosition
-//                val context = itemView.context
-//
-
-//            }
         }
     }
 }
